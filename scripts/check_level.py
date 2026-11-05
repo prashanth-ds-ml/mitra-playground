@@ -73,13 +73,19 @@ def check_level(level_dir: Path) -> bool:
     return ok
 
 
+def find_levels(levels_root: Path) -> list[Path]:
+    if not levels_root.is_dir():
+        return []
+    return sorted(p for p in levels_root.iterdir() if (p / "level.toml").exists())
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("levels", nargs="*", type=Path, help="level folders to check")
     parser.add_argument("--all", action="store_true", help="check every folder in levels/")
     args = parser.parse_args(argv)
 
-    dirs = sorted(p for p in LEVELS.iterdir() if (p / "level.toml").exists()) if args.all else args.levels
+    dirs = find_levels(LEVELS) if args.all else args.levels
     if not dirs:
         print("no levels to check")
         return 0 if args.all else 2

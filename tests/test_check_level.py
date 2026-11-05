@@ -58,6 +58,12 @@ def test_missing_folder_is_reported(tmp_path):
         raise AssertionError("missing plan.md was not reported")
 
 
+def test_find_levels_handles_missing_folder(tmp_path):
+    assert check_level.find_levels(tmp_path / "no-such-folder") == []
+    make_level(tmp_path, "", "")
+    assert [p.name for p in check_level.find_levels(tmp_path)] == ["99-toy"]
+
+
 def test_hidden_tests_reach_the_workspace_but_reference_does_not_by_default(tmp_path):
     level = make_level(tmp_path, "x = 1\n", "x = 2\n")
     ws = tmp_path / "ws"
