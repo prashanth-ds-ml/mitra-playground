@@ -15,6 +15,7 @@ decide. The levels get harder, so the scoreboard shows how far up the ladder a l
 | 04 | API + database | FastAPI + SQLite, then Postgres | planned |
 | 05 | AI app (chatbot / RAG) | uses OpenRouter or NVIDIA APIs at runtime | planned |
 | 06 | Small full system (front end + API + DB + AI) | tbd | planned |
+| 07 | Ops sandbox: one incident across real MCP servers (GitHub, Git, Postgres, Docker, AWS via LocalStack) | Docker Compose + seeded data | planned |
 
 ## Scoreboard
 Filled in as runs happen. A level counts as passed only when the hidden tests pass.
