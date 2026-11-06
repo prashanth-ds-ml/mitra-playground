@@ -9,3 +9,6 @@ __pycache__/
 node_modules/
 logs/
 *.log
+
+# Mitra session files (memory, plans, logs, history): local only
+.mitra/
