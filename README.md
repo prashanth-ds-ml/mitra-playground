@@ -9,7 +9,7 @@ decide. The levels get harder, so the scoreboard shows how far up the ladder a l
 ## The ladder
 | Level | Project | Stack | Status |
 |---|---|---|---|
-| 01 | Snake game | Python game logic + browser (HTML canvas) front end | ready (6 tasks, 15 visible + 57 hidden tests) |
+| 01 | Snake game | Python game logic + browser (HTML canvas) front end | ready (6 tasks, 17 visible + 55 hidden tests) |
 | 02 | Second arcade-style game (more state, collisions) | tbd | planned |
 | 03 | Portfolio site | tbd | planned |
 | 04 | API + database | FastAPI + SQLite, then Postgres | planned |
