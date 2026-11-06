@@ -22,7 +22,7 @@ Filled in as runs happen. A level counts as passed only when the hidden tests pa
 
 | Level | Builder | Model | Visible tests | Hidden tests | Date |
 |---|---|---|---|---|---|
-| - | - | - | - | - | - |
+| 01 | Mitra (core loop, plan task by task) | qwen3.5:4b, 128K | 17/17 | 54/55 (not passed: new food can land on the new head) | 2026-11-06 |
 
 ## How a level is laid out
 ```

@@ -1,0 +1,19 @@
+{
+  "level": "01-snake",
+  "builder": "mitra",
+  "model": "qwen3.5:4b",
+  "date": "2026-11-06 19:50",
+  "build_seconds": 428,
+  "builder_exit": 0,
+  "visible": {
+    "passed": 17,
+    "line": "17 passed in 0.09s"
+  },
+  "visible_plus_hidden": {
+    "failed": 1,
+    "passed": 71,
+    "line": "1 failed, 71 passed in 0.23s"
+  },
+  "passed": false,
+  "workspace": "C:\\Users\\prash\\AppData\\Local\\Temp\\run-01-snake-3t7dnm9y"
+}
