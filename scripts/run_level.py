@@ -79,6 +79,11 @@ def main() -> int:
     out_dir = ROOT / "results" / meta["id"]
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / f"{time.strftime('%Y%m%d-%H%M')}-{args.builder}-{args.model.replace(':', '-')}.json"
+    runs = ws / ".mitra" / "runs"
+    if runs.is_dir():  # keep the run records (scrubbed) for `mitra report` and the dashboard
+        keep = ROOT / ".mitra" / "runs" / f"level-{meta['id']}-{out_file.stem}"
+        shutil.copytree(runs, keep, dirs_exist_ok=True)
+        result["records"] = str(keep.relative_to(ROOT))
     out_file.write_text(json.dumps(result, indent=2), encoding="utf-8")
     print(json.dumps(result, indent=2))
     print(f"result: {out_file}")
