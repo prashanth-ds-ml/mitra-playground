@@ -1,0 +1,3 @@
+id = "01-snake"
+title = "Snake game: Python game logic + browser canvas"
+test_command = "python -m pytest -q tests"

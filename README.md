@@ -9,7 +9,7 @@ decide. The levels get harder, so the scoreboard shows how far up the ladder a l
 ## The ladder
 | Level | Project | Stack | Status |
 |---|---|---|---|
-| 01 | Snake game | Python game logic + browser (HTML canvas) front end | planned |
+| 01 | Snake game | Python game logic + browser (HTML canvas) front end | ready (6 tasks, 15 visible + 57 hidden tests) |
 | 02 | Second arcade-style game (more state, collisions) | tbd | planned |
 | 03 | Portfolio site | tbd | planned |
 | 04 | API + database | FastAPI + SQLite, then Postgres | planned |
@@ -51,3 +51,10 @@ fill in your keys. `.env` is never committed. Mitra itself only uses local model
 
 ## Licence
 MIT
+
+## Run a builder on a level
+```
+python scripts/run_level.py levels/01-snake --builder mitra --model qwen3.5:4b
+```
+Builds a fresh workspace (start files, visible tests, plan), runs Mitra on the plan one task at a time, then adds the
+hidden tests and records the result in `results/<level>/`.
